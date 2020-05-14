@@ -1,0 +1,60 @@
+.header {
+	background: #E4B9B9;
+}
+
+.inner {
+	height: 815px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.inner .nav {
+	width: 10%;
+	background: seashell;
+}
+
+.inner .nav .nav-item {
+	width: 100%;
+	height: 20%;
+	line-height: 160px;
+	text-align: center;
+	font-size: 18px;
+	background: #DFF0D8;
+	float: left;
+}
+
+.inner .nav .nav-item a {
+	display: block;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+}
+
+.inner .nav .nav-item:nth-child(even) {
+	background: #AFD9EE;
+}
+
+.inner .content {
+	width: 90%;
+	background: bisque;
+}
+
+.inner .content .content-item {
+	float: left;
+}
+
+.inner .content .banner {
+	width: 300px;
+	height: 300px;
+	margin: 0;
+}
+
+.inner .content .banner img {
+	width: 300px;
+	height: 300px;
+}
+
+.footer {
+	background: #E4B9C0;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>aboutyou</title>
+		<link rel="stylesheet" type="text/css" href="../css/aboutyou.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/animate.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/swiper.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="inner">
+				<ul class="nav-items left">
+					<li class="active">one</li>
+					<li>two</li>
+					<li>three</li>
+					<li>four</li>
+					<li>five</li>
+					<li>six</li>
+				</ul>
+				<div class="content right">
+					<div class="content-item current" id="one">one</div>
+					<div class="content-item" id="two">two</div>
+					<div class="content-item" id="three">three</div>
+					<div class="content-item" id="four">four</div>
+					<div class="content-item" id="five">five</div>
+					<div class="content-item" id="six">six</div>
+				</div>
+			</div>
+			<div class="bottom ">
+
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">Slide 1</div>
+						<div class="swiper-slide">Slide 2</div>
+						<div class="swiper-slide">Slide 3</div>
+						<div class="swiper-slide">Slide 4</div>
+						<div class="swiper-slide">Slide 5</div>
+						<div class="swiper-slide">Slide 6</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../lib/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<!-- <script src="../lib/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script> -->
+		<script type="text/javascript">
+			$(".nav-items li").click(function() {
+				$(this).addClass("active").siblings().removeClass("active");
+				var index = $(this).index();
+				$(".content .content-item").eq(index).addClass("current").siblings().removeClass("current");
+			});
+
+
+			var swiper = new Swiper('.swiper-container', {
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'progressbar',
+				}
+			});
+		</script>
+	</body>
+</html>

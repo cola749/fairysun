@@ -1,0 +1,26 @@
+body,h1,h2,h3,h4,h5,h6,div,ul,li,p,span,i,input,iframe,dl,dt,dd,hr{margin:0;padding:0;}
+ul{list-style:none;}
+hr{background: none;border:none;}
+a{text-decoration:none;-webkit-tap-highlight-color: rgba(15, 91, 252, 0.3);}
+input,img{border:none;border-radius: 0}
+.clear:after{content:'200B';display:block;font-size:0;line-height:0;clear:both;}
+select{outline:none;}
+button,input[type='button'],input[type='submit']{border: none;}
+select,button,input{outline:none;}
+.hide{display: none;}
+body{background: #fff}
+input::-webkit-input-placeholder{
+    color:#a3a3a3;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#a3a3a3;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#a3a3a3;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#a3a3a3;
+}
+*{
+	font-family: '微软雅黑';
+}

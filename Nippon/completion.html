@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>完工</title>
+    <link rel="stylesheet" type="text/css" href="css/resize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/setRem.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.js"></script>
+    <script src='js/echarts-liquidfill.js'></script>
+    <script src="js/china.js"></script>
+
+</head>
+<body>
+<div class="libang_box">
+    <div class="header">
+        <div class="today-wrap">
+            <span>今日：</span>
+            <span class="now_data">2020-00-00 00:00:00</span>
+        </div>
+        <ul class="nav">
+            <li onclick="goto('jiandan')"><span>建单</span></li>
+            <li onclick="goto('qiandan')"><span>签单</span></li>
+            <li class="active"><span>完工</span></li>
+        </ul>
+        <p class="header_tittle">立邦刷新数据可视化</p>
+        <div class="shaixuan">
+            <div class="fanwei">查看范围:
+                <select class="sheng">
+                    <option>全部区公司</option>
+                </select>
+                <select class="shi">
+                    <option>全部销售大区</option>
+                </select>
+                <select class="qu">
+                    <option>全部销售大区</option>
+                </select>
+            </div>
+            <div class="data_search">
+                <ul class="cli_btn">
+                    <li>年</li>
+                    <li>季</li>
+                    <li class="active">月</li>
+                    <li>周</li>
+                    <li>日</li>
+                </ul>
+                <select>
+                    <option>2020-04</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="content_box">
+        <div class="con_l">
+            <div class="con_lt">
+                <p class="des_tit">基础信息</p>
+                <div class="jichu_box wangong_jichu">
+                    <p class="xiao_tit">累计完工统计</p>
+                    <div class="jd_des xiao_tit">
+                        <div class="jd_des_num">
+                            <span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span>
+                            单
+                        </div>
+                        <div class="jd_des_xinzeng">
+                            <p class="xiao_tit">上月新增</p>
+                            <span class="huang_text">10491</span> 单
+                        </div>
+                        <div>
+                            <p class="xiao_tit">环比增长</p>
+                            <span class="huang_text">80%</span>
+                        </div>
+                    </div>
+                    <div class="yue_tj xiao_tit">
+                        <div>
+                            <p class="xiao_tit">本月完工统计</p>
+                            <div class="yue_num">
+                                <span>0</span><span>0</span><span>0</span><span>0</span><span>0</span>
+                                单
+                            </div>
+                        </div>
+                        <div>
+                            <p class="xiao_tit">当月完工目标</p>
+                            <div class="yue_mb">
+                                <span>0</span><span>0</span><span>0</span><span>0</span><span>0</span>
+                                单
+                            </div>
+                        </div>
+                    </div>
+                    <p class="xiao_tit">SAP预算</p>
+                    <div class="niandu_zhibiao xiao_tit">
+                        <span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span>
+                        元
+                    </div>
+                    <p class="xiao_tit">SAP达成</p>
+                    <div class="leiji_xiaoshou xiao_tit">
+                        <div class="leiji_xiaoshou_num">
+                            <span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span><span>0</span>
+                            元
+                        </div>
+                        <div class="leiji_xiaoshou_xinzeng">
+                            <p class="xiao_tit">上月新增</p>
+                            <span class="huang_text">100987</span> 元
+                        </div>
+                        <div>
+                            <p class="xiao_tit">环比增长</p>
+                            <span class="huang_text">90%</span>
+                        </div>
+                    </div>
+                    <ul class="type_tj">
+                        <li>
+                            <p>区公司</p>
+                            <p><span>7</span>个</p>
+                        </li>
+                        <li>
+                            <p>销售大区</p>
+                            <p><span>22</span>个</p>
+                        </li>
+                        <li>
+                            <p>销售城市</p>
+                            <p><span>112</span>个</p>
+                        </li>
+                        <li>
+                            <p>服务商</p>
+                            <p><span>201</span>个</p>
+                        </li>
+                    </ul>
+                    <ul class="jichu_bottom">
+                        <li>
+                            <p>完工单</p>
+                            <p class="num"><span>5246</span>单</p>
+                            <p>建单达成<span>95%</span></p>
+                            <p>同比增长5002单</p>
+                        </li>
+                        <li>
+                            <p>未达成单</p>
+                            <p class="num"><span>4</span>单</p>
+                            <p>同比增长40单</p>
+                            <p>环比增长<span>0.2%</span></p>
+                        </li>
+                        <li>
+                            <p>已结算单</p>
+                            <p class="num"><span>4464</span>单</p>
+                            <p>同比增长4090单</p>
+                            <p>环比增长<span>0.1%</span></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="con_lb">
+                <p class="des_tit">完工统计</p>
+                <div class="jiandan_list">
+                    <p class="list_tit">
+                        <span class="l1">排名</span>
+                        <span class="l2">名称</span>
+                        <span class="l3">完工单数</span>
+                        <span class="l4">未达成数</span>
+                        <span class="l5">已结算单数</span>
+                    </p>
+                    <div class="scroll_box">
+                        <ul>
+                            <li>
+                                <span class="l1"><font style="background: #bc0028;">TOP1</font></span>
+                                <span class="l2" style="color:#bc0028;">DIY苏皖公司</span>
+                                <span class="l3">1106</span>
+                                <span class="l4">177</span>
+                                <span class="l5">929</span>
+                            </li>
+                            <li>
+                                <span class="l1"><font style="background: #c0656e;">TOP2</font></span>
+                                <span class="l2" style="color:#c0656e;">DIY华中公司</span>
+                                <span class="l3">900</span>
+                                <span class="l4">0</span>
+                                <span class="l5">900</span>
+                            </li>
+                            <li>
+                                <span class="l1"><font style="background: #68659c;">TOP3</font></span>
+                                <span class="l2" style="color:#68659c;">DIY中原公司</span>
+                                <span class="l3">822</span>
+                                <span class="l4">4</span>
+                                <span class="l5">818</span>
+                            </li>
+                            <li>
+                                <span class="l1">4</span>
+                                <span class="l2">DIY江南公司</span>
+                                <span class="l3">709</span>
+                                <span class="l4">18</span>
+                                <span class="l5">691</span>
+                            </li>
+                            <li>
+                                <span class="l1">5</span>
+                                <span class="l2">DIY南区公司</span>
+                                <span class="l3">588</span>
+                                <span class="l4">9</span>
+                                <span class="l5">579</span>
+                            </li>
+                            <li>
+                                <span class="l1">6</span>
+                                <span class="l2">DIY华北公司</span>
+                                <span class="l3">480</span>
+                                <span class="l4">2</span>
+                                <span class="l5">478</span>
+                            </li>
+                            <li>
+                                <span class="l1">7</span>
+                                <span class="l2">DIY西区公司</span>
+                                <span class="l3">428</span>
+                                <span class="l4">8</span>
+                                <span class="l5">420</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="con_c">
+            <div class="con_ct" id="map"></div>
+            <div class="con_cb">
+                <div>
+                    <p class="des_tit">完工达成提醒</p>
+                    <div id="wangong_dacheng"></div>
+                </div>
+                <div class="con_cbc">
+                    <p class="des_tit">施工异常提醒</p>
+                    <div class="yichang_box">
+                        <div id="yichang1"></div>
+                        <div id="yichang2"></div>
+                    </div>
+                </div>
+                <div>
+                    <p class="des_tit">主施工类型分析</p>
+                    <div id="shigong_leixing"></div>
+                </div>
+            </div>
+        </div>
+        <div class="con_r">
+            <div class="con_rt">
+                <div class="con_rtt">
+                    <p class="des_tit">建单预警</p>
+                    <div class="jd_yujing">
+                        <ul>
+                            <li><span class="jiandan">[验收]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="paidan">[结算]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="shangmen">[收款]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="renyuan">[质保发放]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="jiandan">[验收]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="paidan">[结算]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="shangmen">[收款]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="renyuan">[质保发放]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="jiandan">[验收]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="paidan">[结算]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="shangmen">[收款]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="renyuan">[质保发放]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="jiandan">[验收]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="paidan">[结算]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="shangmen">[收款]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="renyuan">[质保发放]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="jiandan">[验收]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="paidan">[结算]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="shangmen">[收款]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="renyuan">[质保发放]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="jiandan">[验收]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="paidan">[结算]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="shangmen">[收款]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                            <li><span class="renyuan">[质保发放]</span>【DIY华北公司-京城销售部-北京-北京玉云名居建筑装饰有限公司】 建单</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="con_rtb">
+                    <p class="des_tit">风险预警</p>
+                    <div class="fengxian_box">
+                        <div id="fxyj_wg"></div>
+                        <div id="fxyj_gf"></div>
+                        <div id="fxyj_fy"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="con_rb">
+                <p class="des_tit">使用产品提醒</p>
+                <div id="chanpin_tixing"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--第一级弹窗-->
+<div class="mask" id="mask" hidden>
+    <div class="content">
+        <img class="close" src="img/close_btn.png">
+        <p class="p_tit">DIY中原公司</p>
+        <table>
+            <thead>
+            <tr>
+                <th>销售部</th>
+                <th>建单</th>
+                <th>未受理</th>
+                <th>基检</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>豫西北销售部</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>豫中销售部</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>西安销售部</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>鲁东销售部</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>鲁西销售部</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>鲁南销售部</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>鲁中销售部</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--第二级弹窗-->
+<div class="mask" id="mask1" hidden>
+    <div class="content">
+        <img class="close" src="img/close_btn.png">
+        <p class="p_tit"></p>
+        <table>
+            <thead>
+            <tr>
+                <th>销售城市</th>
+                <th>建单</th>
+                <th>未受理</th>
+                <th>基检</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>安阳市</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>洛阳市</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--第三级弹窗-->
+<div class="mask" id="mask2" hidden>
+    <div class="content">
+        <img class="close" src="img/close_btn.png">
+        <p class="p_tit"></p>
+        <table>
+            <thead>
+            <tr>
+                <th>服务商</th>
+                <th>建单</th>
+                <th>未受理</th>
+                <th>基检</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>洛阳容颜装饰</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+                <td><span class="day">每日单流水</span><span class="sale">业务人员流水</span></td>
+            </tr>
+            <tr>
+                <td>洛阳容颜装饰</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+                <td><span class="day">每日单流水</span><span class="sale">业务人员流水</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--第四级弹窗-->
+<div class="mask" id="mask3" hidden>
+    <div class="content">
+        <img class="close" src="img/close_btn.png">
+        <p class="p_tit"></p>
+        <table>
+            <thead>
+            <tr>
+                <th>日期</th>
+                <th>建单</th>
+                <th>未受理</th>
+                <th>基检</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page_box">
+            <a href="javascript:;">上一页</a>
+            <a href="javascript:;">下一页</a>
+        </div>
+    </div>
+</div>
+
+<!--业务人员-->
+<div class="mask" id="mask4" hidden>
+    <div class="content">
+        <img class="close" src="img/close_btn.png">
+        <p class="p_tit"></p>
+        <table>
+            <thead>
+            <tr>
+                <th>人员</th>
+                <th>建单</th>
+                <th>未受理</th>
+                <th>基检</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>张晓</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>张晓</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>张晓</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>张晓</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>张晓</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>张晓</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>张晓</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page_box">
+            <a href="javascript:;">上一页</a>
+            <a href="javascript:;">下一页</a>
+        </div>
+    </div>
+</div>
+
+<div class="mask" id="mask5" hidden>
+    <div class="content">
+        <img class="close" src="img/close_btn.png">
+        <p class="p_tit"></p>
+        <table>
+            <thead>
+            <tr>
+                <th>日期</th>
+                <th>建单</th>
+                <th>未受理</th>
+                <th>基检</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            <tr>
+                <td>2020-01-01</td>
+                <td>190</td>
+                <td>1</td>
+                <td>189</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="page_box">
+            <a href="javascript:;">上一页</a>
+            <a href="javascript:;">下一页</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/common.js"></script>
+<script src="js/completion.js"></script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>for秋准</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="lib/swiper.css" />
+		<link rel="stylesheet" type="text/css" href="lib/animate.css" />
+
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="header"></div>
+			<div class="inner">
+				<div class="nav left">
+					<div class="nav-item"><a href="html/aboutYourself.html">About Yourself</a></div>
+					<div class="nav-item"><a href="html/aboutParents.html"> About Parents</a></div>
+					<div class="nav-item"><a href="html/aboutOthers.html">About Others</a></div>
+					<div class="nav-item"><a href="html/aboutTheWorld.html">About The World</a></div>
+					<div class="nav-item"><a href="html/aboutMore.html">About More...</a></div>
+				</div>
+				<div class="content right">
+					<div class="banner swiper-container content-item">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img class="ani" swiper-animate-effect="fadeInUp" src="img/11.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="ani" swiper-animate-effect="swing" src="img/22.jpg">
+							</div>
+							<div class="swiper-slide">
+								<img class="ani" swiper-animate-effect="rollIn" src="img/33.jpg">
+							</div>
+						</div>
+					</div>
+					<div id="life" style="width: 600px;height: 300px" class="content-item"></div>
+
+				</div>
+			</div>
+			<div class="footer"></div>
+		</div>
+
+
+
+
+
+		<script src="lib/swiper.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/swiper.animate.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// inner 图片
+			var mySwiper = new Swiper('.swiper-container', {
+				on: {
+					init: function() {
+						swiperAnimateCache(this); //隐藏动画元素 
+						swiperAnimate(this); //初始化完成开始动画
+					},
+					slideChangeTransitionEnd: function() {
+						swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+						//this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+					}
+				}
+			});
+			// echarts
+			var your = echarts.init(document.getElementById('life'));
+			var option = {
+				title: {
+					text: '吴秋准身高统计',
+					textStyle: {
+						color: '#C4E3F3'
+					}
+				},
+				tooltip: {
+					trigger: 'axis'
+				},
+				xAxis: {
+					type: 'category',
+					data: ['0', '2', '7', '10', '15', '17', '20'],
+					nameLocation: 'end'
+				},
+				yAxis: {
+					type: 'value'
+				},
+				series: [{
+					type: 'line',
+					symbol: 'triangle',
+					symbolSize: 20,
+					data: [60, 82, 101, 154, 170, 175, 183],
+					lineStyle: {
+						normal: {
+							color: 'green',
+							width: 4,
+							type: 'dashed'
+						}
+					},
+					itemStyle: {
+						normal: {
+							borderWidth: 3,
+							borderColor: 'yellow',
+							color: 'blue'
+						}
+					}
+				}]
+			};
+			your.setOption(option);
+		</script>
+
+	</body>
+
+</html>
